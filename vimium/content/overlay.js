@@ -4,7 +4,12 @@ var Vimium = {
 		this.initialized = true;
 		document.addEventListener('keydown', Vimium.onKeydown, true);
 	},
-
+	
+	websiteBlacklist: [
+		/^http(s)?:\/\/mail\.google\.com\//,
+		/^http(s)?:\/\/(www\.)google\.com\//,
+	],
+	
 	keymap: {
 		'f': function() { Vimium.activateMode(Vimium.activateCallback, false) },
 		'F': function() { Vimium.activateMode(Vimium.activateCallback, true) },
@@ -313,8 +318,10 @@ var Vimium = {
 	onKeydown: function(e) { 
 		var doc = gBrowser.contentDocument;
 		
-		// GMail dirty hack
-		if (doc.location.href.match(/^https:\/\/mail\.google\.com\//)) return;
+		// Check website blacklist
+		for (var i = 0; i < Vimium.websiteBlacklist.length; i++) {
+			if (doc.location.href.match(Vimium.websiteBlacklist[i])) return;
+		}
 		
 		var keyChar = String.fromCharCode(e.keyCode).toLowerCase();
 		if (e.shiftKey)
