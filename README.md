@@ -14,7 +14,8 @@ I love the way this extension is *supposed* to work, but:
 
 My changes
 ----------
-At the moment the only new feature I implemented in this fork is the blacklisting of the GMail.com domain (hard-coded, dirty hack).
+At the moment the only new feature I've implemented in this fork is a generic website blacklist. To add, change or remove websites you need
+to edit the source code and rebuild the extension.
 
 Planned features
 ---------------
