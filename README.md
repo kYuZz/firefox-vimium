@@ -1,11 +1,15 @@
+To install, click [here](https://github.com/kYuZz/firefox-vimium/blob/master/vimium.xpi).
+
+About vimium-firefox
+--------------------
 This is my own fork of the [Vimium Firefox](http://code.google.com/p/vimium-firefox/) extension, which seems to have been abandoned by
 its original author.
 
 Problems with the original version
 ----------------------------------
 I love the way this extension is *supposed* to work, but:
-* Unmantained by original author;
-* Clashes with many websites and doesn't provide a website blacklist;
+* It is unmantained by original author;
+* It clashes with many websites and doesn't provide a website blacklist;
 * It fires in the browser's URL bar (awful). 
 
 My changes
