@@ -6,8 +6,10 @@ var Vimium = {
 	},
 	
 	websiteBlacklist: [
-		/^http(s)?:\/\/mail\.google\.com\//,
-		/^http(s)?:\/\/(www\.)google\.com\//,
+		/^http(s)?:\/\/mail\.google\.com\/?/,
+		/^http(s)?:\/\/(www\.)google\.com\/?/,
+		/^http(s)?:\/\/(www\.)google\.co\.uk\/?/,
+		/^http(s)?:\/\/(www\.)google\.it\/?/
 	],
 	
 	keymap: {
@@ -320,6 +322,9 @@ var Vimium = {
 		
 		// Check website blacklist
 		for (var i = 0; i < Vimium.websiteBlacklist.length; i++) {
+			// alert("DEBUG: doc.location.href = " + doc.location.href);
+			// alert("DEBUG: Vimium.websiteBlacklist[i] = " + Vimium.websiteBlacklist[i]);
+			// alert("DEBUG: match found in blacklist = " + doc.location.href.match(Vimium.websiteBlacklist[i]));
 			if (doc.location.href.match(Vimium.websiteBlacklist[i])) return;
 		}
 		
