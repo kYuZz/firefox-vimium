@@ -319,7 +319,9 @@ var Vimium = {
 	},
 	onKeydown: function(e) { 
 		var doc = gBrowser.contentDocument;
-		
+	
+        if (!doc.hasFocus()) return;
+    	
 		// Check website blacklist
 		for (var i = 0; i < Vimium.websiteBlacklist.length; i++) {
 			// alert("DEBUG: doc.location.href = " + doc.location.href);
