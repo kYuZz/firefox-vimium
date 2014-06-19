@@ -9,16 +9,16 @@ Problems with the original version
 ----------------------------------
 I love the way this extension is *supposed* to work, but:
 * It is unmantained by original author;
-* It clashes with many websites and doesn't provide a website blacklist;
-* It fires in the browser's URL bar (awful). 
+* It clashes with many websites and doesn't provide a website blacklist; (ugly workaround).
+* ~~It fires in the browser's URL bar (awful).~~ (fixed!)
 
 My changes
 ----------
-At the moment the only new feature I've implemented in this fork is a generic website blacklist. To add, change or remove websites you need
-to edit the source code and rebuild the extension.
+* 2014-06-19: Fixed bug that makes Vimium activate accidentally when typing in the browser's URL bar.
+* Quick and dirty generic website blacklist. There's no GUI, it requires changing an array in the source code and rebuilding the extension.
 
 Planned features
 ---------------
 *If* I get some free time, I will:
 * Add an interface for blacklisting websites;
-* Fix the URL bar bug.
+* ~~Fix the URL bar bug.~~ (fixed!)
